@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="chipGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#DC2626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#991B1B;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Chip body -->
+  <rect x="25" y="25" width="50" height="50" rx="4" fill="url(#chipGrad)" filter="url(#glow)"/>
+  <!-- Chip pins -->
+  <g fill="#F8FAFC">
+    <!-- Top pins -->
+    <rect x="32" y="18" width="4" height="10"/>
+    <rect x="42" y="18" width="4" height="10"/>
+    <rect x="52" y="18" width="4" height="10"/>
+    <rect x="62" y="18" width="4" height="10"/>
+    <!-- Bottom pins -->
+    <rect x="32" y="72" width="4" height="10"/>
+    <rect x="42" y="72" width="4" height="10"/>
+    <rect x="52" y="72" width="4" height="10"/>
+    <rect x="62" y="72" width="4" height="10"/>
+    <!-- Left pins -->
+    <rect x="18" y="32" width="10" height="4"/>
+    <rect x="18" y="42" width="10" height="4"/>
+    <rect x="18" y="52" width="10" height="4"/>
+    <rect x="18" y="62" width="10" height="4"/>
+    <!-- Right pins -->
+    <rect x="72" y="32" width="10" height="4"/>
+    <rect x="72" y="42" width="10" height="4"/>
+    <rect x="72" y="52" width="10" height="4"/>
+    <rect x="72" y="62" width="10" height="4"/>
+  </g>
+  <!-- Inner circuit pattern -->
+  <g stroke="#F8FAFC" stroke-width="1.5" fill="none" opacity="0.8">
+    <rect x="35" y="35" width="30" height="30" rx="2"/>
+    <line x1="40" y1="50" x2="60" y2="50"/>
+    <line x1="50" y1="40" x2="50" y2="60"/>
+    <circle cx="50" cy="50" r="5"/>
+  </g>
+</svg>
